@@ -1,0 +1,10 @@
+QUERY 1:
+SELEZIONA GLI UTENTI CHE HANNO POSTATO ALMENO UN VIDEO:
+
+SELECT u.id , u.username , m.type
+FROM users AS u
+JOIN medias AS m
+ON u.id = m.user_id //collega l'utente al media che ha caricato
+WHERE m.type = 'video'; //filtra i contenuti di tipo video
+
+RESULT:127

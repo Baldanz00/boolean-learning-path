@@ -1,0 +1,62 @@
+Recap
+Che cos’è lo stato interno di una classe? Insieme dei valori associati agli attributi.
+Il this a che cosa si riferisce? Si riferisce all’oggetto corrente.
+Qual è la differenza tra classe e oggetto? Classe è il modello, l’oggetto è l’istanza.
+Java che linguaggio di programmazione è? Sia compilato che (in byte code) e poi viene interpretato dalla JVM.
+
+—————————
+Nella programmazione PROCEDURALE: si scrivono metodi e procedure che operano sui dati.
+
+Nella top si creano oggetti che contengono sia dati che metodi.
+
+Perché si usa l’oop?
+- Codice più chiaro e pulito;
+- Aiuta a mantenere il codice DRY (Dont Repeat Yourself) = riuso
+
+Dopo aver visto in Rettangolo.Java e App.java il comportamento errato di un oggetto, che lasciando attributi "aperti"
+ha permesso dall'esterno di essere manomesso... si deduce che l'oggetto in questione, Rettangolo, non si è comportamento
+come un mondo a sè.
+
+Vogliamo restringere l'accesso che gli altri oggetti e classi hanno verso il nostro oggetto Rettangolo, perchè deve
+essere l'oggetto a permettere o negare queste azioni di modifica, in modo da mantenere il proprio stato interno.
+
+IL MONDO ESTERNO DEVE SAPERE COSA FA L'OGGETTO. NO COME LO FA.
+
+Come possiamo farlo? INCAPSULAMENTO. (information hiding: capacità di nascondere l'implementazione interna esponendo un interfaccia).
+                        |-> possiamo incapsulare, ossia restringere l'accesso ad attributi e metodi, mostrando all'esterno
+                            solo un interfaccia fatta da metodi.
+OOP: HA 3 PRINCIPI CARDINI:
+    1. INCAPSULAMENTO;
+    2. EREDITARIETA';
+    3. POLIMORFISMO;
+
+LIVELLI DI ACCESSO: decido io cosa vedere...
+Java ha 4 livelli di accesso: kw modificatore di visibilità
+- public : visibile nella classe, nel package e ovunque -> è il livello più aperto.
+- private : visibile nella classe e nel package
+- protected : visibile solo nella classe
+- defoult = non specificato / package : visibile nella classe e nel package.
+--- Rettangolo.java.3 --> cambio il modificatore da defoult a private
+
+Come scelgo i livelli di accesso?
+La classe è pubblica di solito.
+Gli attributi sono sempre private.
+I metodi con cui l'oggetto interagisce con l'esterno sono public.
+I costruttori sono public.
+I metodi "di servizo" sono private. -> se devo fare delle operazioni che sono di utilità alla classe ma non c'è bisogno
+che li vedano da fuori perchè potrebbero manometterli.
+---Rettangolo.java:26
+
+Una volta resi gli attributi private, non posso sapere che valori hanno...
+Come posso accedere ai valori? metodo get -> lettura dei dati.
+metodo set -> scrittura dei dati.
+---Rettangolo.java:28
+
+Ma cosa cambia con il lasciare gli attributi pubblici o fare dei get e setter?
+- posso avere solo dei getter, permettendo quindi solo la lettura dei dati;
+- posso avere solo dei setter rendendo l'attributo modificabile ma dicendo che non c'è niente che dipende
+    da quel valore;
+- un getter può calcolare il valore da diversi campi, anzichè restituire un solo valore;
+- un setter può eseguire dei controlli prima di assegnare il valore all'attributo --->SETTER CUSTOM.
+
+UNO DEGLI ESERCIZI PREFERITI DA ALBERTO: CLASSE VALORE ASSOLUTO

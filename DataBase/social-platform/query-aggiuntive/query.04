@@ -1,0 +1,14 @@
+seleziona gli utenti che hanno fatto esattamente un post e quelli che  ne hanno
+fatti esattamente due
+
+select *
+from users  u
+join posts p on u.id = p.id_user
+group by u.id
+having count(p.id)=1
+union
+select *
+from users u
+join posts p on u.id=p.id_user
+group by u.id
+having count(p.id)=2

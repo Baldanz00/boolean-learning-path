@@ -1,0 +1,5 @@
+SELEZIONA IL POST CHE HA PIU' TAGS (CONSIDERA ANCHE IL CASO PARI MERITO)
+
+SELECT * , LENGTh(TAGS) - LENGTh(REPLACE(TAGS, ',' , '')) + 1 AS NUM_TAGS
+from posts
+order by num_tags desc;

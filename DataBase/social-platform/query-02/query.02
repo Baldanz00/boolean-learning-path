@@ -1,0 +1,11 @@
+QUERY 2
+SELEZIONA TUTTI I POST SENZA LIKE
+
+SELECT COUNT(*)  //il count mi raggruppa tutto in una sola riga
+FROM posts AS p
+LEFT JOIN likes AS l
+ON p.id = l.post_id
+WHERE l.post_id IS NULL
+
+
+RESULT: 13

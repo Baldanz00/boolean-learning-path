@@ -1,0 +1,57 @@
+Appunti del 22.07
+
+RECAP
+-> fare esercizi del 17
+- Polimorfismo: possibilità di avere metodi con lo stesso nome ma implementazione diversa.
+- Ereditarietà: capacità della sottoclasse di ereditare attributi e metodi della surclassa geneticamente.
+In java si fa con kw extends
+(Domande sul costruttore)
+- Incapsulare: possibilità di incapsulare attributi e metodi in una singola classe e renderli visibili in
+lettura o scrittura tramite dei metodi.
+
+————————
+
+ASTRAZIONE
+OOP : capacità di astrarre un problema e trovare una soluzione che sia riproducibile per problemi simili.
+
+Classi Astratte: è una classe che può avere dei metodi astratti(metodo definito ma senza implementazione)
+
+La classe astratta è una classe che può avere metodi astratti (non per forza), e un metodo astratto è un metodo che non ha
+corpo:
+public void faiQualcosa3(); --> solo definizione
+
+Se una classe astratta ha metodi astratti non può essere istanziata.
+
+Quale è lo scopo di avere una classe con metodi vuoti e che non può essere istanziata?
+-> non puoi implementare quei metodi, e lo fai fare alle sottoclassi.
+
+---->CLASSE CANCELLATA:----------------------------------------------------------------------------------------------------
+public abstract class Astratta {
+
+    public void faiQualcosa(){ //questo è un metodo concreto perchè ha un corpo (apertura e chiusura delle {})
+        System.out.println("Qualcosa");
+    }
+    public void faiQualcosa2(){} //è definito e implementato perchè ha {}
+    //un metodo atratto non ha le {} , in condizioni normali non compila
+
+    public abstract void faiQualcosa3();//---> metodo astratto
+}
+---------------------------------------------------------------------------------------------------------------------------
+
+A te serve una classe astratta quando hai comportamenti comuni, ma lasci l'implementazione alle classi secondarie.
+La classe astratta può avere metodi private, ma in quanto tali non possono essere visti dalle sottoclassi.
+
+Le classi astratte possono avere i costruttori e attributi.
+E' UNA CLASSE A TUTTI GLI EFFETTI CON LA DIFFERENZA CHE OBBLIGA LE SOTTOCLASSI AD IMPLEMENTARLA.
+
+---->INTERFACE: non è una classe, può avere attributi e metodi(astratti)
+L'interfaccia stabilisce un constratto che dice a cosa devono assomigliare le sottoclassi che la implementano
+Le interfacce sono diverse dalle classi astratte, perchè l'interfaccia non si eredita....
+L'interfaccia ha a che fare con i comportamenti che può avere.
+Le interfacce da implementare possono essere molte.
+L'interfaccia non si eredita, si implementa.
+
+-> il polimorfismo non riguarda solo l'Ereditarietà, ma tutti i comportamenti che una classe può avere..
+di conseguenza l'Override di questi metodi astratti è puro polimorfismo.
+
+-> l'interfaccia , non essendo una classe, non ha il costruttore

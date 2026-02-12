@@ -1,0 +1,49 @@
+** HTML - STRUTTURA BASE **
+<!doctype html>
+    <!-- head, contiene informazioni e risosrse aggiuntive che servono alla pagina -->
+    <head>
+    </head>
+
+    <!-- body, contiene il corpo della pagina -->
+    <body>
+    <!-- tutto il contenuto della pagina -->
+    </body>
+    </html>
+
+
+                                        DIVERSI TIPI DI TAGS
+1. BLOCK LEVEL TAGS: crea un elemento di tipo block che occupa un intera linea; gli elementi successivi occuperanno
+una nuova linea.
+<p> Block tags </p>
+2. INLINE TAGS: gli elementi occuperanno solamente lo spazio del loro contenuto; gli altri elementi
+inline possono affiancarsi sulla stessa linea.
+<strong> Inline tads </strong>
+3. SELFCLOSING TAGS: tag che non prevedono un contenuto, per questo motivo non hanno apertura e chiusura.
+<br> -> obbliga il testo ad andare a capo
+<hr> -> self closing tag
+
+                                        ANNIDAMENTO DEI TAGS
+<div>
+    <h1>
+        Titolo
+    </h1>
+<p>
+Questo è un <em>paragrafo </em>
+</p>
+</div>
+
+                                          BLOCK CONTAINER VS. INLINE CONTAINER
+Ci sono 2 tag che non hanno un significato semantico: <di> e <span>
+
+<!-- block container -->
+<div></div>
+<!-- inline container -->
+<span></span>
+Entrambi si usano come contenitori di altri elementi per formattare meglio i contenuti.
+La differenza tra i due sta nel fatto che <div> è un contenitore blocco, e <span> un contenitore inline.
+
+                                            ATTRIBUTI
+<tag attribute = "value">testo</tag>
+Gli attributi sono delle informazioni aggiuntive che si possono inserire nel tag di apertura degli elementi html.
+Tutti i tag html possono avere uno o più attributi, definiti sempre con la sintassi:
+nome = "valore"

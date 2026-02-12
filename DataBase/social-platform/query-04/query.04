@@ -1,0 +1,10 @@
+QUERY 4
+ORDINA GLI UTENTI PER IL NUMERO DI MEDIA CARICATI (25)
+
+SELECT  COUNT(*)
+FROM users u
+JOIN medias m ON u.id = m.user_id
+GROUP BY username
+ORDER BY count(*) DESC
+
+RESULT 25

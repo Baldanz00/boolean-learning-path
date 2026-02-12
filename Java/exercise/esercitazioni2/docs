@@ -1,0 +1,50 @@
+-> CICLO FOR: è una struttura di controllo che permette di ripetere blocchi di codice ripetutamente.
+    |-> permette di fare iterazioni
+    |-> SINTASSI: for(inizializzazione; condizione; incremento){
+        blocco di codice da eseguire
+    }
+    |
+    |-> "inizializzazione": viene eseguita una sola volta all'inizio del ciclo.Si dichiara e si inizializzaza
+        una variabile contatore -- int i = 0;
+    |-> "condizione": viene valutata ad ogni iterazione, se la condizione è vera, viene eseguito il blocco di
+        codice, altrimenti si esce dal ciclo.
+    |-> "incremento": viene eseguito alla fine dell'iterazione,dove si incrementa o decrementa il contatore.
+    |
+    |-> Skils: permette un controllo maggiore del flusso di esecuzione del codice, eseguendo un blocco di codice specifico
+        fino al raggiungimento di una condizione dettata da me.
+        - è utile per iterare array/collezioni o per ripetere una condizione più volte.
+        |-> nel caso degli array è utile utilizzare il FOR-EACH:
+            int [] numeri = {1, 2,3, 4, 5};
+            for(int numero : numeri){
+                System.out.println(numero);
+            }
+            |->in questo caso il ciclo itera su ogni elemento dell'array numeri, assegnando il valore di ogni elemento alla
+                variabile numero durante ogni iterazione.
+-> WHILE / DO-WHILE: sono due cicli che valutano una condizione booleana. Nel WHILE la condizione viene valutata prima di
+    eseguire il blocco di codice; nel DO-WHILE viene prima eseguito il blocco di codice e poi viene fatta la valutazione.
+    --------
+    CICLO WHILE ------
+    |-> SINTASSI:
+            while (condizione) {
+        //blocco di codice da eseguire
+    }
+        ----> il blocco di codice viene ripetuto finchè la condizione è vera.
+        |-ESEMPIO:     int i = 0;
+                       while (i < 5) {
+                        System.out.println("Valore di i: " + i);
+                        i++;
+                    }
+                    -->il questo caso il codice stamperà i valori da 0 a 4
+    CICLO DO-WHILE ------
+    |->SINTASSI:
+            do {
+        //blocco di codice da eseguire
+    } while (condizione);
+    ---> il blocco di codice viene sempre eseguito almeno una volta, poi viene valutata la condizione.
+    |- ESEMPIO:     int i = 0;
+                    do {
+                        System.out.println("Valore di i: " + i);
+                        i++;
+                    } while (i < 5);
+                    --> anche qui il blocco di codice stamperebbe i valori da 0 a 4, ma dal momento che prima stampa e poi verifica
+                        la condizione, stamperà anche 5, e si interromperà dopo essersi accorto che 5 non è piu nella condizione dettata.

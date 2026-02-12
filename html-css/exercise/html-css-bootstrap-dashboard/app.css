@@ -1,0 +1,4 @@
+/*regole di debug */
+.debug .row > * {
+    border: 1px solid;
+}

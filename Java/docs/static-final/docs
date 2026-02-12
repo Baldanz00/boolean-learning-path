@@ -1,0 +1,74 @@
+Lezione del 17.07
+Recap:
+-> EREDITARIETA’: una classe ha la capacità di ereditare attributi e metodi di un’altra classe.
+->INCAPSULAMENTO: possibilità di permettere l’accesso ad attributi e metodi che hanno visibilità privata. ->proteggere lo stato interno.
+->POLIMORFISMO:capacità di , in contesto di ereditarietà, avere più metodi con lo stesso nome ma che fanno cose diverse a seconda dell’implementazione.
+
+————————————
+Overload: metodi con stesso nome ma con parametri diversi di tipo o numeri.
+-------------
+
+ATTRIBUTI E METODI STATICI
+
+Una classe definisce lo stato interno e suoi metodi , per l'oggetto che verrà creato con il new.
+Ogni oggetto creato avrà uno scope a sè stante in cui esiste il this.
+
+In aggiunta una classe può definire attributi e metodi che non riguardano il singolo oggetto, ma tutta la classe.
+Questi metodi, con la kw static , appartengono allo scope di classe.
+
+ATTRIBUTI STATIC-->
+Quando fai un componente static, viene definito e occupato uno spazio di memoria subito per loro,e poi non possono essere
+cambiati, perchè ce nè una sola copia... quindi ogni volta che le letture vanno ad accedere a quell'area di memoria, tutte vedranno
+solo quella senza poter cambiarne il contemuto. --> variabili di classe.
+
+METODI STATIC -->
+I metodi d'istanza appartengono all'oggetto (get e set).
+I metodi static non hanno bisogno dell'istanza, perchè il suo comportamento non dipende dall'istanza.
+
+Se io cambio il dato Static, tutto ciò che viene letto dopo e scritto dopo, avrà quell'attributo static uguale per tutti.
+
+Di solito le configurazioni delle app sono statiche, perchè ce ne deve essere una sola versione.
+
+BigDecimal -> si usa per evitare errori di calcolo.... vuole sapere di quante cifre deve arrotondare dopo la virgola,
+nel caso di una divisione, e anche che metodo usare per arrotondare:
+
+RoundingMode. CEILING
+Rounding... ›
+
+= RoundingMode. DOWN
+RoundingMode
+
+•* RoundingMode. FLOOR
+RoundingMode
+만
+RoundingMode. HALF_DOWN -----> per eccesso
+RoundingMode
+만
+RoundingMode. HALF_EVEN ---->tronco
+RoundingMode
+
+= RoundingMode. HALF_UP ---> per eccesso
+RoundingMode
+
+RoundingMode. UNNECESSARY --> non necessario, ma può dare errore
+RoundingMode
+
+RoundingMode. UP
+RoundingMode
+
+RoundingMode. valueOf (int rm)
+RoundingMode
+
+• RoundingMode. valuef(String name)
+RoundingMode
+
+RoundingMode. valueOf(Class<T> enumClass, String na...
+
+------------------------------------------------------
+
+---> FINAL : modificatore di non accesso (UPPERCASE_SNACKCASE)
+-> variabile final : voglio creare una costante , dato il primo valore non può cambiare mai.
+-> metodo final : voglio impedire l'overriding
+-> classe final : voglio impedire l'ereditarietà , non ci sarà la sua sottoclasse
+
+Il concetto è proteggere il contenuto perchè non sia cambiato.

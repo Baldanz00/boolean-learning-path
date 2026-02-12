@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+    font-size: 13px;
+}
+
+.blu-text {
+    color: rgb(32, 103, 218);
+}
+
+h1{
+    font-size: 30px;
+}
+
+header {
+    background-color: rgb(28, 80, 158);
+    background-image: url("../img/pattern.png");
+    background-size: 20%;
+}
+
+#logo {
+    background-repeat: no-repeat;
+    width: 200px;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+#bibliography {
+    font-size: 9px;
+    font-weight: 600;
+}
+
+section, footer, .content, .elenco, .table {
+    padding: 20px;
+}
+
+.info-article {
+    color: rgb(119, 150, 150);
+    font-size: 14px;;
+    margin-bottom: 4px;
+}
+
+.autore {
+    font-size: 18px;
+}
+
+.date {
+    font-size: 11px;
+    color: rgb(152, 160, 160);
+    font-weight: 600;
+}
+
+.selected-text {
+    background-color: yellow;
+}
+
+.images-tim1 {
+    background-size: contain;
+}
+
+ul {
+    margin-left: -28px;
+}
+
+table {
+    width: 100%;
+    font-size: 14px;
+    border: 0px solid;
+    border-collapse: collapse;
+}
+.description-table {
+    width: 50%;
+}
+
+thead {
+    background-color: rgb(19, 119, 185);
+    color: rgb(147, 214, 247);
+    text-align: left;
+}
+
+ .blu-rowe {
+    background-color: rgb(150, 167, 235);
+ }
+
+td {
+    padding: 5px
+}
+
+
+h3 {
+    color: rgb(152, 160, 160);
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: rgb(23, 65, 129);
+    background-size: 20%;
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%;
+}
