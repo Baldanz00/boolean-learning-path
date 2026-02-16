@@ -1,0 +1,19 @@
+Amitlu parola
+
+Descrizione
+
+Scrivete un programma che, data una sequenza di parole nel flusso di ingresso, emetta nel flusso di uscita la parola che risulterebbe ultima rovesciando (dal primo all'ultimo carattere) le parole in ingresso e disponendo le parole così ottenute in ordine alfabetico.
+
+Ad esempio, avendo nel flusso di ingresso le parole
+
+zorro
+cane
+fuzz
+mela
+il programma emette fuzz nel flusso di uscita, infatti rovesciando ed ordinano le parole si ottiene
+
+alem
+enac
+orroz
+zzuf
+da cui si evince che l'ultima parola è fuzz.

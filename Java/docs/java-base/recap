@@ -1,0 +1,67 @@
+**Argomenti fondamentali:**
+- **Variabili**: dichiarazione, inizializzazione, scope e naming convention
+- **Tipi di dato**: primitivi (int, double, boolean, char) e reference types (String)
+- **Operatori**: aritmetici (+, -, *, /, %), logici (&&, ||, !), di confronto (==, !=, <, >)
+- **Casting**: conversione implicita ed esplicita tra tipi
+
+**Interazione con l'utente:**
+- **Input**: `Scanner` per leggere da tastiera
+- **Output**: `System.out.println()` e `System.out.print()` per stampare a video
+
+------------------------------------------------------------------------------------------------------------------------
+1. VARIABILI : memorizzare valori nel programma
+-> Dichiarazione: si indica il tipo e il nome
+int numero;
+-> Inizializzazione: si assegna un valore
+numero = 10;
+-> Scope: indica dove la variabile è visibile ed utilizzabile:
+    - dentro un metodo -> usabile solo li dentro
+    - dentro un blocco {} -> usabile solo dentro quel blocco
+-> Naming Convention: nomi in camelCase; il nome deve essere chiaro e descrittivo
+
+2.TIPI DI DATO :
+-> Tipi primitivi: sono tipi di base, contengono il valore direttamente:
+    - int -> numeri interi
+    - double -> numeri con virgola
+    - boolean -> true/false
+    - char -> singolo carattere ("a", "9", "E")
+-> Reference types: contengono un riferimento ad un oggetto, il più usato : String
+String nome = "Mario"; --> le Stringhe sono oggetti
+
+3. OPERATORI
+-> Aritmetici: per fare calcoli matematici
+    + addizione
+    - sottrazione
+    * moltiplicazione
+    / divisione
+    % resto moltiplicazione
+-> Confronti: restituiscono true o false:
+    == uguale
+    != diverso
+    < minore
+    > maggiore
+    <= min o ugiale
+    >= mag o uguale
+-> Logici: combinano condizioni
+    && (AND)
+    || (OR)
+    ! (NOT)
+
+4. CASTING: conversione da un tipo ad un altro
+-> Casting implicito: succede automaticamente se non si perde informazione
+int x = 5;
+double y = x;
+-> Casting esplicito: serve quando si perde precione
+double a = 5.8;
+int b = (int)a; // b=5
+
+5.INTERAZIONE CON L'UTENTE
+-> INPUT - SCANNER: legge dati da tastiera
+
+Scanner scan = new Scanner(System.in);
+int numero = scan.nextInt();
+String nome = scan.nextLine();
+double value = scan.nextDouble();
+-> OUTPUT - PRINT : per stampare a video
+System.out.print("Messaggio");   // senza andare a capo
+System.out.println("Messaggio"); // con a capo

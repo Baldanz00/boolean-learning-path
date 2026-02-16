@@ -1,0 +1,25 @@
+Implementare due classi che rappresentano un Auto:
+- SportCar : tipologia di auto sposrtiva (es. Ferrari)
+- UtilityCar : tipologia di auto utilitaria (e. Fiesta)
+
+Definire i metodi:
+- void stampaVelocitàMassima(): mostra la velocità massima
+dell'auto
+
+- void stampaNumeroPorte(): mostra a video il numero delle porte
+
+- String getNome()
+- void accenditi()
+- void spegni()
+
+SportCar avrà anche il metodo void attivaTurbo()
+che stampa a video "Sto attivando il turbo"
+
+UtilityCar avrà inoltre il metodo void trainaAuto()
+che stamperà "Sto trainando un auto"
+
+Crea una superclasse astratta che implementi i metodi
+condivisi tra le classi e che definisca la firma
+dei metodi che implementeranno le classi figlie
+
+Il nome dell'auto deve esere passato come parametro del costruttore

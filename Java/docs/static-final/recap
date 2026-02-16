@@ -1,0 +1,25 @@
+** STATIC **
+La kw 'static' indica che un elemento appartiene alla classe e no alla singola istanza.
+
+- Concetto di statico
+Il fatto che un elemento appartenga alla classe e no alla singola istanza specifica significa che quel determinato attributo o metodo è
+condiviso tra tutte le istanze della classe.
+
+-- Vaqntaggi --
+. Condivisione dei dati: gli attributi 'static' condividono i valori tra tutte le istanze della classe, risparmiando memoria
+. Accesso diretto: i metodi e gli attributi 'static' possono essere chiamati senza dover creare istanze della classe
+. Costanti condivise: gli attributi 'sttic' possono essere usati per definire costanti --> kw 'final'
+
+-- Utilizzo --
+. Variabili di classe
+. Metodi di Utilities : creare metodi di utilità che possono essere chiamati direttamente dalla classe senza dover istanziare oggetti
+. Costanti: definire costanti che non cambieranno durante il ciclo di vita del programma --> kw 'final'
+
+-- Sintassi --
+public class MiaClasse {
+    static int attributoStatico;
+
+    static void metodoStatico() {
+        // Implementazione
+    }
+}

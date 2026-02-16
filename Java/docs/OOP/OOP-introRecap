@@ -1,0 +1,75 @@
+## OOP Intro
+**Concetti fondamentali:**
+- **Classi e Oggetti**: definizione, istanziamento
+- **Attributi**: variabili di istanza, visibilità (private, public, protected, default)
+- **Costruttore**: definizione, overloading del costruttore, costruttore di default
+- **Metodi**: definizione, parametri, valore di ritorno, overloading
+- **Keyword this**: riferimento all'oggetto corrente, disambiguazione parametri-attributi
+------------------------------------------------------------------------------------------------------------------------
+1. CLASSI E OGGETTI
+-> Classe: è un modello che descrive un tipo di oggetto: cosa contiene (attributi) e cosa può fare (metodi)
+class Persona {
+    String nome;
+    int eta;
+}
+-> Oggetto : è un'istanza della classe : un elemento concreto creaato a partire dal modello
+Persona p1 = new Persona();
+
+2.ATTRIBUTI : sono le variabili di istanza contenute nella classe. Ogni oggetto ha i suoi valori
+class Persona {
+    String nome;
+    int eta;
+}
+-> Visibilità:
+	•	private → accessibile solo all’interno della classe
+	•	public → accessibile ovunque
+	•	protected → accessibile da classi dello stesso package e dalle sottoclassi
+	•	default (senza parola chiave) → visibile solo nello stesso package
+
+3. COSTRUTTORE: è un metodo speciale che crea e inizializza un oggetto. Ritorna alla classe stessa
+class Persona {
+    String nome;
+    int eta;
+
+    Persona(String nome, int eta) {
+        this.nome = nome;
+        this.eta = eta;
+    }
+}
+-> Costruttore di defoult:
+Se non scrivi nessun costruttore, Java ne crea automaticamente uno vuoto:
+Persona p = new Persona();  // funziona solo se non esistono altri costruttori
+-> Overload del costruttore: puù costruttori con parametri diversi
+Persona() {
+    this.nome = "Sconosciuto";
+    this.eta = 0;
+}
+
+Persona(String nome) {
+    this.nome = nome;
+}
+
+4. METODI: rappresentano le azioni che un oggetto può eseguire
+-> Struttura: ritorno nomeDelMetodo(parametri , richiesti) {...}
+void saluta() {
+    System.out.println("Ciao!");
+}
+
+int somma(int a, int b) {
+    return a + b;
+}
+-> Overload dei Metodi: più metodi con lo stesso nome ma parametri diversi
+void stampa(int x) { }
+void stampa(String s) { }
+
+5.KEYWORD THIS: serve per riferirsi all'oggetto corrente
+-> Per disambiguare attributi e parametri
+Persona(String nome) {
+    this.nome = nome;
+    // this.nome = attributo
+    // nome = parametro
+}
+-> Per chiamare altri costruttori
+Persona() {
+    this("Sconosciuto", 0);  // chiama l’altro costruttore
+}

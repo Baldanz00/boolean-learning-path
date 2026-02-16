@@ -1,0 +1,44 @@
+**Strutture di controllo:**
+- **Istruzioni condizionali**: if/else
+- **Array**: dichiarazione, inizializzazione, accesso agli elementi, proprietà length
+- **Cicli**: for (tradizionale e foreach)
+------------------------------------------------------------------------------------------------------------------------
+1.ISTRUZIONI CONDIZIONALI (IF/ELSE) : servono per eseguire del codice solo se una condizione è vera
+-> if
+if (condizione){
+//codice eseguito se la condizione è == true
+}
+
+-> if/else: ho delle istruzioni specifiche se la condizione è vera e istruzioni specifiche se la condizione è falsa
+if(condizione){
+//blocco se la condizione è vera
+} else {
+//blocco se la condizione è falsa
+}
+-> posso avere anche più condizioni: if/else if/ else if/ else
+
+2. ARRAY : permettono di memorizzare più valori dello stesso tipo
+-> Dichiarazione
+int [] numeri;
+-> Inizializzazione:
+    - con dimensione:
+    int [] numeri = new int[5]; //array di 5 elementi
+    - con valori già pronti:
+    int numeri[] = {4,3,6,23,2}
+-> Accesso agli elementi: gli indici partono da 0
+numeri[0] = 10; //scrivo nel primo elemento
+int x = numeri[1]; //leggo il secondo elemento
+-> Proprietà length : restituisce la lunghezza dell'array
+int size = numeri.length; -> non è un metodo ( no parentesi)
+
+3. CICLI
+-> for tradizionale : usato quando sai quante iterazioni devi fare
+for(int i = 0; i < 5; i++){ ---> for(inizio; fine; incremento)
+System.out.println(i);
+}
+->foreach: perfetto per scorrere un array senza usare l'indice
+int[] numeri = {2,3,5};
+for(int n : numeri){ --> n prende un elemento alla volta
+System.out.println(n);
+}
+Non puoi modiicare la struttura dell'array, ma solo leggere o usare il valore

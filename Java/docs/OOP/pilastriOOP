@@ -1,0 +1,166 @@
+** COMPOSIZIONE **
+La composizione è l'utilizzo di classi per comporre una classe più grande, dove le sue componenti saranno appunto delle sottoclassi
+In Java la composizione si iferisce al design pattern di composizione, una relazione in cui una classe (il 'contenitore')
+contiene oggetti di un altra classe ( il 'contenuto') per costruire funzionalità complesse.
+
+Invece di ereditare comportamenti, una classe composta ha un attributo che è un riferimento a un istanza di un'altra classe,.
+La composizione è una forma di aggrefazione forte, in cui la parte non può esistere indioendentemente all'intero.
+
+** Caratteristiche principali **
+. relazione 'ha-un': la composizione implementa una relazione 'ha-un', tipo l'automobile ha-un motore.
+. comportamento delegato: la classe contenitore può delegare il comportamento alla sua parte interna. Se il contenitore ha un metodo che
+chiama mioContenuto.faiQualcosa(), la classe Contenuto dovrà implementare faiQualcosa().
+. istanziazione esplicita: la classe contenitore deve istanziare esplicitamente la classe contenuta nel suo costruttore
+. gestione del ciclo di vita: in Java quando l'oggetto contenitore viene eliminato, la JVM si occuperà automaticamente anche di distruggere
+l'oggetto contenuto, a differenza di altri linguaggi come C++ dove la gestione della memoria è manuale
+
+** EREDITARIETA' **
+Java è un linguaggio di programmazione orientato ad oggetti.
+L'ereditarietà è un paradigma dell'OOP, mecanismo dmediante il quale una classe può ereditare attributi e
+metodi di un altra classe dichiarando di derivare da quest'ultima con la keyword 'extends'.
+
+Ereditarietà vuol dire creare nuve classi basate su classi esistensi.
+
+- Aspetti principali -
+. L'ereditarietà è il concetto secondo cui una classe può ripetere le proprietà e i metodi del suo genitore ( superclasse)
+. una classe figlia (sottoclasse) è una classe che eredita da un altra
+. una classe genitore (superclasse) è una classe che ha un numero di funzioni e queste funzioni possono essere ereditate dalla classe figlia
+. l'override del metodo sta modificando il comportamento di un metodo della classe derivata. Di solito è un comportamento specifico. Se si sovrascrive
+un medoto nell'erede che è gia nella classe genitore, in un certo senso si sostituisce il metodo genitore
+. una classe può avere solo una classe antenata, ma una classe antenata può avere più fligli
+. La catena di reditarietà è diretta dalla classe più astratta, laq superclasse è la più astratta nella catena di classi ( classe base che non richiede implementazione)
+. attraverso la keyword .super ho accesso ad attricuti e metodi della superclasse
+. keyword 'this', mi sto riferendo all'oggetto corrente, evitando ambiguità tra parametri
+
+-> classi astratte: sono classe che definiscono comportamenti e hanno metodi astratti (senza corpo) che verranno implementati dalle sottoclassi. Questi metodi definiscono
+un comportamento generico.
+
+** INCAPSULAMENTO **
+L'incapsulamento è uno dei pilastri fondamenta del'OOP.
+Posso racchiudere lo stato interno di una classe, per proteggerlo dall'esterno. Questo posso farlo cambiando i modificatori di accesso
+come private,protected e non più public.
+
+L'incapsulamento mi permette quindi di controllare quali parti del programma possono accedere o modificare i dati all'interno di un oggetto.
+
+- Vantaggi -
+1. Protezione dei dati: posso impedire modifiche accidentali o non autorizzate ai dati
+2. Migliore manutenzione del codice: l'incapsulamento facilita l'aggiornamento e la modifica del codice perchè mi consente di isolare le moifiche senta intaccare l'intero programma
+3. Riutilizzo : l'incapsulamento mi permette di utilizzare il codice senza dover riscrivere le stesse funzioni in più parti del programma
+4. Flessibilità : attraverso i metodi di accesso (getter e setter) posso gestire le modifiche ai dati in modo controllato, aggiungendo anche logica personalizzata prima di alterare i dati.
+
+public class Studente {
+
+    //variabile privata: incapsulamento dei dati
+    private String name;
+
+    //Getter per accedere alla variabile privata in lettura
+    public String getName() {
+        return name;
+    }
+
+    //Setter per modificare la variabile privata
+    public void setName(String name) {
+        this.name = name;
+    }
+
+** Differenza tra incapsulamento e data hiding **
+Spesso si confondono, i due concetti sono correlati ma hanno differenze:
+- Incapsulamento: riguarda il racchiudere dati e metodi all'interno di una classe e ontrollare l'accesso tramite modificatore di accesso
+- Data hiding: è un concetto più restrittivo che implica nascondere completamente i dati all'esterno della classe, rendendoli accessibili tramite metodi
+Il Data Hiding è una parte dell'incapsulamento, ma l'incapsulamento include anche l'uso di metodi per gestire l'accesso controllato ai dati
+
+** POLIMORFISMO **
+In generale in informatica il termine 'polimorfismo' ('avere molte forme') viene usato per riferirsi a espressioni che possono rappresentare
+valori di diversi tipi -> 'espressioni polimorfiche'
+
+In java il polimorfismo ha due tipi di comportamento:
+. polimorfismo dei metodi -> overload e override dei metodi
+. polimorfismo dei dati -> permette ad una classe di assumere tutte le forme dei figli
+L esempio:
+interface Animale {
+}
+public class Mucca implements Animale {
+    public static void main(String[]args) {
+        Animale a1 = new Mucca();
+    }
+}
+Grazie a questo possiamo usare oggetti che espongono la stessa interfaccia, ma hanno implementazioni diverse.
+
+[Una interfaccia definisce un contratto generale che le sottoclassi devono soddisfare, quindi possiamo usare in
+un metodo una interfaccia che varierà il suo comportamento in base a quale sottoclasse verrà usata.
+L esempio:
+public interface Animale {
+    public void emettiVerso();
+}
+public class Cavallo implements Animale {
+    @Override
+    public void emettiVerso() {
+        System.out.println("NITRITO");
+        // TODO Auto-generated method stub
+
+    }
+}
+public class Leone implements Animale{
+    @Override
+    public void emettiVerso() {
+        System.out.println("RUGGITO");
+
+
+    }
+}
+public class Mucca implements Animale {
+    @Override
+    public void emettiVerso() {
+        // TODO Auto-generated method stub
+        System.out.println("MUGGITO");
+    }
+    public void emettiVerso(int c) {
+        // TODO Auto-generated method stub
+        System.out.println("MUGGITO  forter");
+    }
+}
+public class Prova {
+
+    public static void faiVerso(Animale l) {
+        l.emettiVerso();
+    }
+    public static void main(String[] args) {
+        Leone l1 = new Leone();
+        faiVerso(l1);
+        Mucca m = new Mucca();
+        faiVerso(m);
+        Cavallo c = new Cavallo();
+        faiVerso(c);
+
+        //
+        //
+         Animale[] arrayAnimali = new Animale[5];
+
+         arrayAnimali[0] = new Mucca();
+         arrayAnimali[1] = new Mucca();
+         arrayAnimali[2] = new Cavallo();
+         arrayAnimali[3] = new Mucca();
+         arrayAnimali[4] = new Leone();
+
+
+
+         for(int i = 0; i < arrayAnimali.length; i++)
+         {
+             Animale anim = arrayAnimali[i];
+
+
+
+         }
+
+         for(Animale e: arrayAnimali)
+             e.emettiVerso();
+
+
+        // chiamata di un metodo che appartiene solo al figlio
+         Animale muc = new Mucca();
+         muc.emettiVerso(1); //errore compilazione, metodo non visi-bile
+    }
+}
+N.B. Tutte le classi dipendono dalla classe Object, di conseguenza Object può assumere la forma di qualsiasi classe.
+tipo:
+Object o1 = new Cavallo();

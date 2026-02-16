@@ -1,0 +1,14 @@
+Spring MVC segue il pattern Model-View-Controller incentrato sul front-controller,DispatcherServlet, che indirizza tutte le richieste
+HTTP al controller giusto.
+L'annotation '@Controller' contrassegna una classe come controller, di fatto applico l'Inversion of Control di Spring,
+rendendo la classe una components di Spring.
+L'annotation '@RequestMapping' mappa le richieste web a specifici metodi di controllo.
+
+-> Model: incapsula i dati dell'applicazione. Di fatto ha la responsabilità di maneggiare i dati.
+    |_ '@Entity'
+-> View : prende i dati dal Model e genera l'output HTML che il browser del client interpreta. Di fatto è la parte che si interfaccia
+con l'utente o altre applicazioni e contiene logiche di presentazione (formattaData)
+-> Controller: elabora le richieste dell'utente e le passa alla view per il rendering. E' quindi il collegamento tra il Model e la
+View, con le sue logiche di business (chiede al model e restituisce alla view)
+
+Annotation '@Autowired'-> Dependency Injection di Spring

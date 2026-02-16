@@ -1,0 +1,34 @@
+Che cos'è Spring Framework?
+Spring è un Framework open-source nato con l'intento di gestire la complessità nello sviluppo di applicazioni enterprse.
+
+Perchè usare questo framework e non altri?
+1. Spring è un Framework leggero , e grazie alla sua architettura modulare è possibile utilizzarlo nella sua interezza o solo in parte.
+L'adozione di Spring in un progetto è semplice,può avvenire in maniera incrementale e non ne sconvolge l'architettura esistente.
+
+2. Spring è un lightweight container e si propone come alternativa a J2EE. A differenza di J2EE, Spring pone un modello più
+semplice e leggero per lo sviluppo di entità di business. Questa semplicità è dovuta all'uso di Inversion of Control e l'Aspect Oriented
+che danno maggiore spessore al framework e favoriscono la focalizzazione dello sviluppo sulla logica applicativa essenziale
+
+** L'architettura di Spring **
+Uno dei vantaggi di Spring è quello di poter escludere le parti del framework non necessarie all'applicazione che si sta sviluppando, includendo
+solo quelle utili. Questo è possibile grazie all'architettura modulare di Spring che è composta da 5 livelli:
+
+1. CORE CONTAINER : rappresenta la parte principale di Spring e sopra di esso è costruito l'intero framework.
+I moduli di core sono responsabili delle funzionalità di Inversione of Control e Dependency Injection ed hanno come compito la creazione,
+gestione e manipolazione di oggetti di qualsiasi natura che, in Spring, vengono chiamati 'beans'
+-> Modulo context estende i servizi basilari del Core aggiungendo le funzionalità del framework. Tra queste ci sono JNDI, EJB, JMX,
+internazionalizzazione (I18N) e supporto agli eventi.
+-> Modulo Expression Language che fornisce un linguaggio per interrogare e modificare oggetti a runtime
+
+2.DATA ACCESS/INTEGRATION : fornisce un livello di astrazione per l'accesso ai dati mediante tecnologie eterogenee tra loro come JDBC, Hibernate i JDO.
+Questo modulo tende a nascondere la complessità delle API di accesso ai dati, semplificando ed uniformando le problematiche legate alla
+gestione delle connessioni , delle transazioni e delle eccezioni.
+
+3. SPRING AOP : aggiunge al framework la funzionalità della programmazione Aspect Oriented. AOP offre un nuovo modo di programmare;
+In Spring l'utilizzo di AOP offre il meglio di sè nella gestione delle transazioni, permettendo di evitare l'utilizzo degli EJB.
+
+4. SPRING WEB : è responsabile delle caratteristiche Web del framework. Oltre a funzioni basilari, per la creazione di appWeb, questo
+livello mette a disposizione un'implementazione del pattern MVC realizzando lo SPRING MVC FRAMEWORK ( moduli web-Servlet e Web-Portlet)
+
+5. TESTING : mette a disposizione un ambiente per i test delle componenti Spring, grazie anche alla sua integrazione con JUnit e TestNG e alla
+presenza di Mok objects per il testing del codice in isolamento

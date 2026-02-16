@@ -1,0 +1,22 @@
+## Java Collections Framework
+- **Java Collections Framework**
+- **List**
+- **Set**
+- **Map**
+- **Differenze e utilizzi tra le varie implementazioni***
+- **Iteratori**
+- **Generics**
+- **Utility methods**
+
+La J.C.F. è un insieme di interfacce (tipo List, Set e MAp) e classi (ArrayList, HashSet, HashMap...) che implementano interfacce.
+Tutti questi fanno parte della java.util.
+Vengono usati per archiviare, cercare, ordinare e organizzare i dati più facilmente usando metodi e modelli standardizzati.
+
+Se pensiamo al Collections Framework come una cassetta degli attrezzi:
+Le interfacce come List definiscono il comportamento, classi come ArrayList sono gli strumenti che effettivamente attuano
+quel comportamento
+
+** Interfacce comuni e Classi del Collections Framework **
+- List(interface) - ArrayList, LinkedList(classes) ---> collezioni ordinate che consentono duplicati
+- Set(interface) - HashSet, TreeSet, LinkedHashSet(classes) ---> collezione di elementi senza duplicati
+Map(interface) - HashMap, TreeMap, LinkedHashMAp(classes) ---> rapporto chiave-valore con gli elementi interni. Possono esserci duplicati dei valori ma no delle chiavi
